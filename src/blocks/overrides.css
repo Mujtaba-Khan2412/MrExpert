@@ -1,0 +1,250 @@
+/* Global Montserrat font import */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap");
+
+/* Force Montserrat font everywhere */
+body,
+html,
+* {
+  font-family: "Montserrat", "Montserrat", sans-serif !important;
+  font-optical-sizing: auto;
+}
+/* Overrides to adapt third-party template styles to Reactbits blocks without editing block source */
+
+/* 1. Allow easy scaling of SplitText content */
+.split-parent.big-title {
+  font-size: clamp(3rem, 12vw, 8rem);
+  line-height: 0.9;
+  font-weight: 700;
+}
+.split-parent.left {
+  text-align: left !important;
+}
+
+/* Provide optional class to force very large text without relying on Tailwind */
+.huge-text {
+  font-size: 8rem !important;
+  font-weight: 800 !important;
+  line-height: 0.85 !important;
+}
+
+/* Tiled background for entire page */
+body {
+  background-repeat: repeat;
+  background-size: auto; /* Keep original tile size */
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/* Offset anchored scroll positions so fixed navbar doesn't cover section titles */
+#features,
+#about,
+#services,
+#portfolio,
+#testimonials,
+#team,
+#contact {
+  scroll-margin-top: clamp(110px, 15vh, 160px);
+  position: relative;
+}
+
+/* Ensure all sections maintain the background */
+#root {
+  background: transparent;
+}
+
+.intro {
+  background: transparent !important;
+  min-height: 100vh;
+  display: table;
+  width: 100%;
+  padding: 0;
+}
+
+/* Team grid responsive control */
+.team-grid {
+  width: 100%;
+}
+@media (min-width: 1200px) {
+  .team-grid {
+    grid-template-columns: repeat(4, minmax(240px, 1fr)) !important;
+  }
+}
+@media (min-width: 900px) and (max-width: 1199px) {
+  .team-grid {
+    grid-template-columns: repeat(3, minmax(240px, 1fr)) !important;
+  }
+}
+@media (min-width: 600px) and (max-width: 899px) {
+  .team-grid {
+    grid-template-columns: repeat(2, minmax(240px, 1fr)) !important;
+  }
+}
+@media (max-width: 599px) {
+  .team-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Enlarged ProfileCards while retaining 4-across layout */
+.team-grid .pc-card-wrapper {
+  width: 100%;
+  max-width: 100%; /* allow full column width */
+  margin: 0 auto;
+}
+.team-grid .pc-card {
+  height: 430px; /* larger static height for consistent row */
+  max-height: 430px;
+}
+.team-grid .pc-details h3 {
+  font-size: min(4svh, 2rem);
+}
+.team-grid .pc-details p {
+  font-size: 14px;
+}
+
+@media (min-width: 1200px) {
+  .team-grid {
+    justify-items: center;
+  }
+}
+
+/* Ensure Montserrat everywhere (redundant safety) */
+* {
+  font-family: "Montserrat", sans-serif !important;
+}
+body {
+  font-family: "Montserrat", sans-serif !important;
+}
+
+/* Remove header overlay and ensure full viewport */
+.intro {
+  background: transparent !important;
+  min-height: 100vh;
+  display: table;
+  width: 100%;
+  padding: 0;
+}
+
+.intro .overlay {
+  background: transparent !important; /* Remove dark overlay */
+}
+
+/* White text styling for header */
+.white-text,
+.white-text * {
+  color: white !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for readability */
+}
+
+.big-title.white-text {
+  color: white !important;
+}
+
+/* Ensure all header text is white */
+#header p,
+#header .intro-text p {
+  color: white !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Global text elements */
+/* Explicit element list for legacy specificity battles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+div,
+a,
+button,
+input,
+textarea,
+label {
+  font-family: "Montserrat", sans-serif !important;
+}
+
+/* Remove tile background from sections for better readability - keep only on body */
+
+/* --- Testimonials (yellow translucent tab style) --- */
+.scroll-stack-card .testimonial-card {
+  padding: 40px clamp(1.5rem, 3vw, 3rem);
+  border-radius: 28px;
+  display: flex;
+  flex-direction: row;
+  gap: clamp(1.5rem, 3vw, 3.2rem);
+  position: relative;
+  color: #1c1c1c;
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: linear-gradient(
+    135deg,
+    rgba(235, 194, 44, 0.55),
+    rgba(235, 194, 44, 0.3) 70%
+  );
+}
+.scroll-stack-card.alt-1 .testimonial-card {
+  background: linear-gradient(
+    135deg,
+    rgba(235, 194, 44, 0.5),
+    rgba(235, 194, 44, 0.28) 70%
+  );
+}
+/* Removed pseudo-element overlay to eliminate light clipping glow */
+.testimonial-card .testimonial-avatar {
+  width: 110px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.35);
+}
+.testimonial-card .testimonial-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.testimonial-card blockquote {
+  margin: 0 0 14px 0;
+  font-size: clamp(1.05rem, 1rem + 0.55vw, 1.55rem);
+  line-height: 1.55;
+  font-weight: 500;
+  position: relative;
+}
+.testimonial-card blockquote:before {
+  content: "“";
+  position: absolute;
+  left: -18px;
+  top: -20px;
+  font-size: 4rem;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.1);
+  font-family: serif;
+}
+.testimonial-card .testimonial-author {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-size: 1rem;
+  opacity: 0.9;
+  color: #222;
+}
+.testimonial-card .testimonial-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (max-width: 700px) {
+  .scroll-stack-card .testimonial-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .testimonial-card blockquote:before {
+    left: -10px;
+    top: -12px;
+    font-size: 3rem;
+  }
+}

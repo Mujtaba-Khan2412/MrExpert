@@ -1,184 +1,184 @@
 {
   "Header": {
-    "title": "We are a Landing Page",
-    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum."
+    "title": "Professional Carpet & Upholstery Care",
+    "paragraph": "Revive, sanitise and protect your carpets with eco‑friendly deep cleaning trusted across the UK."
   },
   "About": {
-    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "paragraph": "We specialise in advanced, eco‑responsible carpet and soft furnishing cleaning for homes, offices and managed properties throughout the UK. Using low‑moisture and hot water extraction systems, hospital‑grade sanitation and fibre‑safe detergents, we restore freshness, extend textile life and create healthier indoor environments. Our trained technicians follow rigorous multi‑stage processes that lift embedded soil, allergens, bacteria and odours while safeguarding delicate fibres and backings.",
     "Why": [
-      "Lorem ipsum dolor",
-      "Tempor incididunt",
-      "Lorem ipsum dolor",
-      "Incididunt ut labore"
+      "NCCA & IICRC trained technicians",
+      "Child & pet safe, eco detergents",
+      "Fast-dry low moisture options",
+      "Hospital-grade sanitising rinse"
     ],
     "Why2": [
-      "Aliquip ex ea commodo",
-      "Lorem ipsum dolor",
-      "Exercitation ullamco",
-      "Lorem ipsum dolor"
+      "Stain & odour neutralisation",
+      "Advanced fibre protection",
+      "Clear, upfront fixed pricing",
+      "100% satisfaction guarantee"
     ]
   },
   "Gallery": [
     {
-      "title": "Project Title",
+      "title": "Office Reception Revival",
       "largeImage": "img/portfolio/01-large.jpg",
       "smallImage": "img/portfolio/01-small.jpg"
     },
     {
-      "title": "Project Title",
+      "title": "Tenanted Flat Turnaround",
       "largeImage": "img/portfolio/02-large.jpg",
       "smallImage": "img/portfolio/02-small.jpg"
     },
     {
-      "title": "Project Title",
+      "title": "Coffee Stain Removal",
       "largeImage": "img/portfolio/03-large.jpg",
       "smallImage": "img/portfolio/03-small.jpg"
     },
     {
-      "title": "Project Title",
+      "title": "End of Tenancy Deep Clean",
       "largeImage": "img/portfolio/04-large.jpg",
       "smallImage": "img/portfolio/04-small.jpg"
     },
     {
-      "title": "Project Title",
+      "title": "Wool Berber Restoration",
       "largeImage": "img/portfolio/05-large.jpg",
       "smallImage": "img/portfolio/05-small.jpg"
     },
     {
-      "title": "Project Title",
+      "title": "Allergy Relief Treatment",
       "largeImage": "img/portfolio/06-large.jpg",
       "smallImage": "img/portfolio/06-small.jpg"
     },
     {
-      "title": "Project Title",
+      "title": "Retail Entrance Refresh",
       "largeImage": "img/portfolio/07-large.jpg",
       "smallImage": "img/portfolio/07-small.jpg"
     },
     {
-      "title": "Project Title",
+      "title": "Sofa Steam Sanitisation",
       "largeImage": "img/portfolio/08-large.jpg",
       "smallImage": "img/portfolio/08-small.jpg"
     },
     {
-      "title": "Project Title",
+      "title": "Pet Odour Neutralising",
       "largeImage": "img/portfolio/09-large.jpg",
       "smallImage": "img/portfolio/09-small.jpg"
     }
   ],
   "Services": [
     {
-      "icon": "fa fa-wordpress",
-      "name": "Lorem ipsum dolor",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "icon": "fa fa-leaf",
+      "name": "Eco Hot Water Extraction",
+      "text": "Deep fibre flush using industry leading, low-residue solutions that lift soil, allergens and bacteria while protecting backings."
     },
     {
-      "icon": "fa fa-cart-arrow-down",
-      "name": "Consectetur adipiscing",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "icon": "fa fa-shield",
+      "name": "Stain & Spot Treatment",
+      "text": "Targeted chemistry for coffee, wine, oil, rust and pet accidents with fibre-safe neutralisation to prevent re-wicking."
     },
     {
-      "icon": "fa fa-cloud-download",
-      "name": "Lorem ipsum dolor",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "icon": "fa fa-paw",
+      "name": "Pet Odour Neutralising",
+      "text": "Enzyme & oxidising treatments that break down organic odours at source— not masking with perfume."
     },
     {
-      "icon": "fa fa-language",
-      "name": "Consectetur adipiscing",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "icon": "fa fa-home",
+      "name": "End of Tenancy Packages",
+      "text": "Rapid turnaround carpet & upholstery refresh that helps secure deposits and meet managing agent standards."
     },
     {
-      "icon": "fa fa-plane",
-      "name": "Lorem ipsum dolor",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "icon": "fa fa-asterisk",
+      "name": "Allergy & Sanitising Rinse",
+      "text": "Hypoallergenic neutral rinse plus antimicrobial application reducing dust mites, spores and common irritants."
     },
     {
-      "icon": "fa fa-pie-chart",
-      "name": "Consectetur adipiscing",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "icon": "fa fa-couch",
+      "name": "Upholstery & Sofa Care",
+      "text": "Gentle multi-stage fabric cleansing restoring brightness and softness to sofas, chairs and soft furnishings."
     }
   ],
   "Testimonials": [
     {
       "img": "img/testimonials/01.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "John Doe"
+      "text": "\"Brilliant service – old traffic lanes in our hallway lifted far better than we expected and everything was dry by evening.\"",
+      "name": "Sophie R. – Leeds"
     },
     {
       "img": "img/testimonials/02.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "Johnathan Doe"
+      "text": "\"Professional, punctual and transparent on price. The pet odour treatment genuinely removed the smell, not just covered it.\"",
+      "name": "Daniel K. – Manchester"
     },
     {
       "img": "img/testimonials/03.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "John Doe"
+      "text": "\"Our office reception carpets look brand new. We booked an evening slot and they left everything spotless.\"",
+      "name": "Office Manager – Birmingham"
     },
     {
       "img": "img/testimonials/04.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "Johnathan Doe"
+      "text": "\"They rescued a wool rug I thought was ruined after a red wine spill. Colour is even again – amazing result.\"",
+      "name": "Helen P. – Bristol"
     },
     {
       "img": "img/testimonials/05.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "John Doe"
+      "text": "\"End of tenancy clean passed inspection first time; letting agent even asked who we used.\"",
+      "name": "Arjun S. – London"
     },
     {
       "img": "img/testimonials/06.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "Johnathan Doe"
+      "text": "\"Allergy symptoms noticeably down after their anti-mite treatment. Will rebook for maintenance.\"",
+      "name": "Martin D. – Sheffield"
     }
   ],
   "Team": [
     {
       "img": "img/team/01.jpg",
-      "name": "John Doe",
-      "job": "Director"
+      "name": "Lewis Carter",
+      "job": "Founder & Lead Technician"
     },
     {
       "img": "img/team/02.jpg",
-      "name": "Mike Doe",
-      "job": "Senior Designer"
+      "name": "Amelia Brooks",
+      "job": "Customer Care Lead"
     },
     {
       "img": "img/team/03.jpg",
-      "name": "Jane Doe",
-      "job": "Senior Designer"
+      "name": "Ravi Patel",
+      "job": "Senior Carpet Specialist"
     },
     {
       "img": "img/team/04.jpg",
-      "name": "Karen Doe",
-      "job": "Project Manager"
+      "name": "Chloe Martin",
+      "job": "Upholstery & Fabric Care"
     }
   ],
   "Contact": {
-    "address": "4321 California St, San Francisco, CA 12345 ",
-    "phone": "+1 123 456 1234",
-    "email": "info@company.com",
-    "facebook": "fb.com",
-    "twitter": "twitter.com",
-    "youtube": "youtube.com"
+    "address": "Unit 12, Riverside Park, Leeds, LS2 7AB",
+    "phone": "+44 113 555 0198",
+    "email": "hello@mrexpertclean.co.uk",
+    "facebook": "https://facebook.com/mrexpertclean",
+    "twitter": "https://twitter.com/mrexpertclean",
+    "youtube": "https://youtube.com/@mrexpertclean"
   },
   "Features": [
     {
-      "icon": "fa fa-comments-o",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+      "icon": "fa fa-tachometer",
+      "title": "Fast Dry Times",
+      "text": "Low-moisture methods mean most carpets are walk-safe within 1–2 hours."
     },
     {
-      "icon": "fa fa-bullhorn",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+      "icon": "fa fa-recycle",
+      "title": "Eco Conscious",
+      "text": "Biodegradable, wool-safe, child & pet friendly formulations used throughout."
     },
     {
-      "icon": "fa fa-group",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+      "icon": "fa fa-certificate",
+      "title": "Certified Quality",
+      "text": "Trained & insured technicians using calibrated pro-grade equipment."
     },
     {
-      "icon": "fa fa-magic",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+      "icon": "fa fa-thumbs-up",
+      "title": "Satisfaction Promise",
+      "text": "If a treated stain returns within 7 days we’ll re-attend free."
     }
   ]
 }

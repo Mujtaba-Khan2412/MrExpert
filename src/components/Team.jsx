@@ -10,6 +10,25 @@ export const Team = ({ data }) => {
       style={{ padding: "110px 0 130px" }}
     >
       <div className="container">
+        <style>{`
+          /* Force center cards on mobile with text-align fallback */
+          @media (max-width: 768px) {
+            #team .container {
+              text-align: center !important;
+              padding-left: 20px !important;
+              padding-right: 20px !important;
+            }
+            #team .team-grid {
+              display: block !important;
+              text-align: center !important;
+            }
+            #team .team-grid > * {
+              display: inline-block !important;
+              margin: 24px auto !important;
+              text-align: left !important;
+            }
+          }
+        `}</style>
         <div
           className="section-title"
           style={{ textAlign: "center", marginBottom: 60 }}
@@ -24,11 +43,15 @@ export const Team = ({ data }) => {
           style={{
             display: "grid",
             gap: "56px 48px",
-            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+            /* Use fixed max column width so single column centers instead of stretching full width */
+            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 320px))",
             alignItems: "start",
             justifyItems: "center",
+            justifyContent: "center",
             margin: "0 auto",
             maxWidth: 1320,
+            width: "100%",
+            placeContent: "center",
           }}
         >
           {team.length === 0 && (

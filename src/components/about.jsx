@@ -36,7 +36,7 @@ export const About = (props) => {
       style={{
         position: "relative",
         overflow: "hidden",
-        padding: "40px 0",
+        padding: "60px 0 70px",
         background: "transparent",
       }}
     >
@@ -59,7 +59,7 @@ export const About = (props) => {
         }}
       ></div>
       <div
-        className="container"
+        className="about-shell"
         style={{
           position: "relative",
           background:
@@ -69,15 +69,17 @@ export const About = (props) => {
           borderRadius: 40,
           boxShadow: "0 8px 40px -8px rgba(0,0,0,0.18)",
           border: "1px solid rgba(255,255,255,0.35)",
-          padding: 0,
+          padding: "0 14px 0 0",
           display: "flex",
-          alignItems: "center",
+          alignItems: "stretch",
           minHeight: 360,
+          overflow: "hidden",
         }}
       >
         <div
+          className="about-image-wrap"
           style={{
-            flex: 1,
+            flex: "0 0 38%",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -89,51 +91,67 @@ export const About = (props) => {
             src={cleanerImg}
             alt="Professional cleaner"
             style={{
-              width: 220,
+              width: "clamp(160px,40vw,260px)",
               height: "auto",
-              borderRadius: 24,
-              boxShadow: "0 8px 32px 0 rgba(0,0,0,0.10)",
+              borderRadius: 28,
+              boxShadow: "0 8px 32px -6px rgba(0,0,0,0.18)",
               background: "#fff",
-              padding: 12,
+              padding: 14,
               objectFit: "contain",
             }}
           />
         </div>
         <div
+          className="about-content"
           style={{
-            flex: 2,
-            padding: 32,
+            flex: 1,
+            padding: "40px clamp(1.25rem,3vw,46px) 42px",
             color: "#222",
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
+            gap: 10,
           }}
         >
           <h2
             style={{
               fontWeight: 800,
-              fontSize: 36,
-              marginBottom: 12,
-              color: "#222",
+              fontSize: "clamp(1.95rem,3.2vw,2.5rem)",
+              margin: "0 0 4px",
+              letterSpacing: "-0.5px",
             }}
           >
             About Us
           </h2>
-          <p style={{ fontSize: 18, marginBottom: 24, lineHeight: 1.6 }}>
+          <p
+            style={{
+              fontSize: "clamp(0.95rem,1.1rem,1.15rem)",
+              margin: "0 0 20px",
+              lineHeight: 1.6,
+              maxWidth: 920,
+            }}
+          >
             {props.data ? props.data.paragraph : "loading..."}
           </p>
           <h3
             style={{
               fontWeight: 700,
-              fontSize: 24,
-              marginBottom: 10,
-              color: "#222",
+              fontSize: "clamp(1.35rem,2.2vw,1.6rem)",
+              margin: "4px 0 10px",
             }}
           >
             Why Choose Us?
           </h3>
-          <div style={{ display: "flex", gap: 32 }}>
-            <ul style={{ flex: 1, fontSize: 16, paddingLeft: 18, margin: 0 }}>
+          <div className="about-lists" style={{ display: "flex", gap: 32 }}>
+            <ul
+              style={{
+                flex: 1,
+                fontSize: 16,
+                paddingLeft: 18,
+                margin: 0,
+                listStyle: "disc",
+              }}
+            >
               {props.data
                 ? props.data.Why.map((d, i) => (
                     <li key={`${d}-${i}`} style={{ marginBottom: 8 }}>
@@ -142,7 +160,15 @@ export const About = (props) => {
                   ))
                 : "loading"}
             </ul>
-            <ul style={{ flex: 1, fontSize: 16, paddingLeft: 18, margin: 0 }}>
+            <ul
+              style={{
+                flex: 1,
+                fontSize: 16,
+                paddingLeft: 18,
+                margin: 0,
+                listStyle: "disc",
+              }}
+            >
               {props.data
                 ? props.data.Why2.map((d, i) => (
                     <li key={`${d}-${i}`} style={{ marginBottom: 8 }}>
@@ -154,6 +180,36 @@ export const About = (props) => {
           </div>
         </div>
       </div>
+      <style>{`
+        /* Responsive adjustments for About section */
+        @media (max-width: 1080px) {
+          #about .about-shell { flex-direction: column; padding: 0 0 10px; }
+          #about .about-image-wrap { padding: 34px 34px 0; flex: 0 0 auto; }
+          #about .about-content { padding: 18px clamp(1rem,5vw,2.1rem) 44px; }
+        }
+        @media (max-width: 780px) {
+          #about { padding: 48px 0 64px; }
+          #about .about-shell { border-radius: 34px; }
+          #about .about-image-wrap { padding: 28px 28px 0; }
+          #about .about-content { padding: 26px clamp(1rem,6vw,1.75rem) 40px; }
+          #about .about-lists { flex-direction: column; gap: 14px; }
+          #about .about-content h2 { font-size: clamp(1.9rem,7.2vw,2.35rem); }
+          #about .about-content h3 { font-size: clamp(1.2rem,5.5vw,1.45rem); }
+          #about .about-content p { font-size: 0.98rem; }
+        }
+        @media (max-width: 520px) {
+          #about { padding: 44px 0 60px; }
+          #about .about-shell { border-radius: 30px; }
+          #about .about-image-wrap img { width: clamp(150px,60vw,220px); padding: 12px; }
+          #about .about-content { padding: 24px 20px 38px; }
+          #about .about-lists ul { font-size: 15px; }
+          #about .about-content p { line-height: 1.55; }
+        }
+        @media (hover:none) and (pointer:coarse) {
+          /* Hide the custom cursor glow on touch devices */
+          #about div[style*='pointer-events: none'][style*='width: 120px'] { display:none !important; }
+        }
+      `}</style>
     </div>
   );
 };

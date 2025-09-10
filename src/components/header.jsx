@@ -1,9 +1,7 @@
 import React, { useCallback } from "react";
 import iconImg from "../img/icon.png";
 import ukFlag from "../img/flag-uk.svg";
-import Iridescence from "../blocks/Backgrounds/Iridescence/Iridescence";
-import SplitText from "../blocks/TextAnimations/SplitText/SplitText";
-import TextPressure from "../blocks/TextAnimations/TextPressure/TextPressure";
+// Iridescence background removed
 
 export const Header = (props) => {
   const handleAnimationComplete = () => {};
@@ -13,31 +11,17 @@ export const Header = (props) => {
       style={{
         position: "relative",
         overflow: "hidden",
-        minHeight: "100vh",
+        // Remove nav offset to close the gap
+        "--nav-offset": "0px",
+        paddingTop: "var(--nav-offset)",
+        scrollMarginTop: "90px", // Keep scroll margin for anchor links
+        height: "100vh",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
+        background: "#ffffff", // Clean white background
       }}
     >
-      <div
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          width: "100%",
-          height: "100%",
-          zIndex: 0,
-        }}
-      >
-        <Iridescence
-          color={[0.5, 0.5, 0]}
-          mouseReact={false}
-          amplitude={0.1}
-          speed={1.0}
-        />
-      </div>
       <HeaderContent
         data={props.data}
         onAnimationComplete={handleAnimationComplete}
@@ -74,94 +58,148 @@ const HeaderContent = ({ data, onAnimationComplete }) => {
         position: "relative",
         zIndex: 1,
         width: "100%",
-        maxWidth: 1500,
-        margin: "0 auto",
-        padding: "0 clamp(1rem,4vw,3rem)",
+        height: "100%",
         display: "flex",
-        gap: 64,
-        alignItems: "stretch",
-        justifyContent: "space-between",
-        flexWrap: "wrap",
+        alignItems: "center",
       }}
     >
-      <form
-        onSubmit={handleSubmit}
+      {/* Left Half - Title Text */}
+      <div
         style={{
-          flex: "1 1 560px",
-          maxWidth: 760,
+          flex: "1",
+          height: "100%",
           display: "flex",
           flexDirection: "column",
-          gap: 26,
-          background:
-            "linear-gradient(135deg, rgba(235,194,44,0.20), rgba(235,194,44,0.10))",
-          backdropFilter: "blur(14px)",
-          WebkitBackdropFilter: "blur(14px)",
-          padding: "42px 48px 48px",
-          borderRadius: 52,
-          border: "1px solid rgba(255,255,255,0.45)",
-          boxShadow: "0 10px 40px -10px rgba(0,0,0,0.25)",
+          justifyContent: "center",
+          alignItems: "flex-end",
+          textAlign: "right",
+          paddingRight: "100px", // Increased from 60px to move text more to the left
+          paddingLeft: "40px",
+          background: "rgba(255,255,255,0.1)",
+          backdropFilter: "blur(8px)",
+          WebkitBackdropFilter: "blur(8px)",
         }}
       >
-        <div
+        <h1
           style={{
-            marginBottom: 8,
-            width: "100%",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
+            fontSize: "clamp(2.5rem, 6vw, 4.5rem)",
+            fontWeight: 900,
+            lineHeight: 1.1,
+            letterSpacing: "-1px",
+            margin: 0,
+            color: "#000000", // Black text color
+            textShadow: "none", // Remove text shadow
+            fontFamily: "Montserrat, sans-serif",
+            marginBottom: "24px",
           }}
         >
-          <div
+          The Best Cleaners in the UK!
+        </h1>
+        <p
+          style={{
+            fontSize: "clamp(1.2rem, 2vw, 1.6rem)",
+            fontWeight: 600,
+            margin: 0,
+            color: "#000000 !important", // Force black text color
+            letterSpacing: "0.5px",
+            lineHeight: 1.4,
+            maxWidth: "500px",
+            textShadow: "none", // Remove any shadow
+            WebkitTextFillColor: "#000000", // Force black for webkit
+            opacity: 1, // Ensure full opacity
+          }}
+        >
+          All your carpet cleaning needs in one place
+        </p>
+      </div>
+
+      {/* Right Half - Logo with Form Overlay */}
+      <div
+        style={{
+          flex: "1",
+          height: "100%",
+          position: "relative",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          background: "rgba(0,0,0,0.05)",
+        }}
+      >
+        {/* Logo Image - Full opacity and height */}
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            zIndex: 1,
+          }}
+        >
+          <img
+            src={iconImg}
+            alt="Cleaning service icon"
             style={{
-              width: "100%",
-              display: "flex",
-              justifyContent: "center",
+              height: "100%", // Full height
+              width: "auto", // Maintain aspect ratio
+              objectFit: "contain",
+              filter: "none", // Remove shadow
             }}
-          >
-            <TextPressure
-              text="UK's Number 1 Cleaners!"
-              alpha={false}
-              stroke={true}
-              width={false}
-              weight={true}
-              italic={true}
-              textColor="#a86d04"
-              strokeColor="#f1c226"
-              minFontSize={32}
-              shrinkWrap={true}
-              fixedFontSize={48}
-              singleLine={true}
-            />
-          </div>
-          <p
-            style={{
-              fontSize: "clamp(1.05rem,1.55vw,1.35rem)",
-              fontWeight: 600,
-              margin: "20px 0 8px",
-              color: "#222",
-              letterSpacing: 0.3,
-              textAlign: "center",
-              width: "100%",
-            }}
-          >
-            All your carpet cleaning needs in one place
-          </p>
+          />
         </div>
-        <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
-          <div>
-            <label style={labelStyle} htmlFor="name">
-              Name
-            </label>
-            <input
-              id="name"
-              name="name"
-              placeholder="Name"
-              required
-              style={{ ...fieldBase, fontSize: 15 }}
-            />
-          </div>
-          <div style={{ display: "flex", gap: 18, flexWrap: "wrap" }}>
-            <div style={{ flex: "1 1 300px" }}>
+
+        {/* Form Overlay */}
+        <form
+          onSubmit={handleSubmit}
+          style={{
+            position: "relative",
+            zIndex: 2,
+            width: "90%",
+            maxWidth: "500px",
+            display: "flex",
+            flexDirection: "column",
+            gap: 20,
+            background:
+              "linear-gradient(135deg, rgba(235,194,44,0.25), rgba(235,194,44,0.15))",
+            backdropFilter: "blur(16px)",
+            WebkitBackdropFilter: "blur(16px)",
+            padding: "40px 35px 45px",
+            borderRadius: 28,
+            border: "1px solid rgba(255,255,255,0.4)",
+            boxShadow: "0 15px 50px -10px rgba(0,0,0,0.4)",
+          }}
+        >
+          <h3
+            style={{
+              fontSize: "1.6rem",
+              fontWeight: 700,
+              color: "#1d1500",
+              margin: "0 0 16px 0",
+              textAlign: "center",
+              textShadow: "0 2px 6px rgba(0,0,0,0.15)",
+            }}
+          >
+            Get Your Quote
+          </h3>
+
+          <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+            <div>
+              <label style={labelStyle} htmlFor="name">
+                Name
+              </label>
+              <input
+                id="name"
+                name="name"
+                placeholder="Name"
+                required
+                style={{ ...fieldBase, fontSize: 14, padding: "14px 20px" }}
+              />
+            </div>
+
+            <div>
               <label style={labelStyle} htmlFor="email">
                 Email
               </label>
@@ -171,11 +209,12 @@ const HeaderContent = ({ data, onAnimationComplete }) => {
                 name="email"
                 placeholder="Email"
                 required
-                style={{ ...fieldBase, fontSize: 15 }}
+                style={{ ...fieldBase, fontSize: 14, padding: "14px 20px" }}
               />
             </div>
-            <div style={{ flex: "1 1 260px", display: "flex", gap: 12 }}>
-              <div style={{ position: "relative", flex: "0 0 120px" }}>
+
+            <div style={{ display: "flex", gap: 12 }}>
+              <div style={{ flex: "0 0 100px" }}>
                 <label style={labelStyle} htmlFor="country">
                   Country
                 </label>
@@ -184,26 +223,25 @@ const HeaderContent = ({ data, onAnimationComplete }) => {
                     ...fieldBase,
                     display: "flex",
                     alignItems: "center",
-                    gap: 10,
-                    padding: "12px 20px",
+                    gap: 8,
+                    padding: "10px 16px",
                     cursor: "default",
                     userSelect: "none",
+                    fontSize: 14,
                   }}
                 >
                   <img
                     src={ukFlag}
                     alt="UK flag"
                     style={{
-                      width: 30,
-                      height: 20,
+                      width: 24,
+                      height: 16,
                       objectFit: "cover",
-                      borderRadius: 3,
+                      borderRadius: 2,
                       boxShadow: "0 0 0 1px rgba(0,0,0,0.15)",
                     }}
                   />
-                  <span style={{ fontWeight: 600, letterSpacing: 0.5 }}>
-                    +44
-                  </span>
+                  <span style={{ fontWeight: 600, fontSize: 13 }}>+44</span>
                 </div>
               </div>
               <div style={{ flex: 1 }}>
@@ -214,151 +252,195 @@ const HeaderContent = ({ data, onAnimationComplete }) => {
                   id="phone"
                   name="phone"
                   placeholder="Phone Number"
-                  style={{ ...fieldBase, fontSize: 15 }}
+                  style={{ ...fieldBase, fontSize: 14, padding: "14px 20px" }}
                 />
               </div>
             </div>
-          </div>
-          <div>
-            <label style={labelStyle} htmlFor="type">
-              Type of Cleaning
-            </label>
-            <select
-              id="type"
-              name="type"
-              defaultValue=""
-              required
-              style={{ ...fieldBase, color: "#444", fontSize: 15 }}
-            >
-              <option value="" disabled>
+
+            <div>
+              <label style={labelStyle} htmlFor="type">
                 Type of Cleaning
-              </option>
-              <option>Office Deep Clean</option>
-              <option>Carpet & Upholstery</option>
-              <option>Post-Construction</option>
-              <option>Disinfection Service</option>
-              <option>Floor Care & Buffing</option>
-            </select>
-          </div>
-          <div style={{ display: "flex", gap: 18, flexWrap: "wrap" }}>
-            <div style={{ flex: "1 1 220px" }}>
-              <label style={labelStyle} htmlFor="rooms">
-                No of Room
               </label>
               <select
-                id="rooms"
-                name="rooms"
+                id="type"
+                name="type"
                 defaultValue=""
-                style={{ ...fieldBase, color: "#444", fontSize: 15 }}
+                required
+                style={{
+                  ...fieldBase,
+                  color: "#444",
+                  fontSize: 14,
+                  padding: "14px 20px",
+                }}
               >
                 <option value="" disabled>
+                  Type of Cleaning
+                </option>
+                <option>Office Deep Clean</option>
+                <option>Carpet & Upholstery</option>
+                <option>Post-Construction</option>
+                <option>Disinfection Service</option>
+                <option>Floor Care & Buffing</option>
+              </select>
+            </div>
+
+            <div style={{ display: "flex", gap: 12 }}>
+              <div style={{ flex: 1 }}>
+                <label style={labelStyle} htmlFor="rooms">
                   No of Room
-                </option>
-                {[...Array(10)].map((_, i) => (
-                  <option key={i + 1}>{i + 1}</option>
-                ))}
-              </select>
-            </div>
-            <div style={{ flex: "1 1 220px" }}>
-              <label style={labelStyle} htmlFor="baths">
-                No of Bathroom
-              </label>
-              <select
-                id="baths"
-                name="baths"
-                defaultValue=""
-                style={{ ...fieldBase, color: "#444", fontSize: 15 }}
-              >
-                <option value="" disabled>
+                </label>
+                <select
+                  id="rooms"
+                  name="rooms"
+                  defaultValue=""
+                  style={{
+                    ...fieldBase,
+                    color: "#444",
+                    fontSize: 14,
+                    padding: "14px 20px",
+                  }}
+                >
+                  <option value="" disabled>
+                    No of Room
+                  </option>
+                  {[...Array(10)].map((_, i) => (
+                    <option key={i + 1}>{i + 1}</option>
+                  ))}
+                </select>
+              </div>
+              <div style={{ flex: 1 }}>
+                <label style={labelStyle} htmlFor="baths">
                   No of Bathroom
-                </option>
-                {[...Array(10)].map((_, i) => (
-                  <option key={i + 1}>{i + 1}</option>
-                ))}
-              </select>
+                </label>
+                <select
+                  id="baths"
+                  name="baths"
+                  defaultValue=""
+                  style={{
+                    ...fieldBase,
+                    color: "#444",
+                    fontSize: 14,
+                    padding: "14px 20px",
+                  }}
+                >
+                  <option value="" disabled>
+                    No of Bathroom
+                  </option>
+                  {[...Array(10)].map((_, i) => (
+                    <option key={i + 1}>{i + 1}</option>
+                  ))}
+                </select>
+              </div>
             </div>
           </div>
-        </div>
-        <div
-          style={{ display: "flex", gap: 20, flexWrap: "wrap", marginTop: 8 }}
-        >
-          <button
-            type="submit"
+
+          <div
             style={{
-              flex: "1 1 320px",
-              border: "1px solid #d8b43d",
-              background: "linear-gradient(145deg,#ebc22c,#d4a800)",
-              color: "#fff",
-              fontWeight: 700,
-              letterSpacing: 1,
-              fontSize: 16,
-              padding: "24px 38px",
-              borderRadius: 90,
-              cursor: "pointer",
-              position: "relative",
-              overflow: "hidden",
-            }}
-          >
-            GET A QUOTE
-          </button>
-          <a
-            href="tel:8338666161"
-            style={{
-              flex: "1 1 240px",
               display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              textDecoration: "none",
-              fontWeight: 700,
-              fontSize: 18,
-              color: "#111",
-              background: "rgba(255,255,255,0.85)",
-              border: "1px solid #111",
-              borderRadius: 90,
-              padding: "24px 38px",
+              gap: 12,
+              marginTop: 8,
+              flexDirection: "column",
             }}
           >
-            833-866-6161
-          </a>
-        </div>
-        {data && (
-          <p style={{ margin: "8px 4px 0", fontSize: 14, opacity: 0.65 }}>
-            {data.paragraph}
-          </p>
-        )}
-      </form>
-      <div
-        style={{
-          flex: "1 1 480px",
-          maxWidth: 620,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          position: "relative",
-          minHeight: 420,
-          background:
-            "linear-gradient(135deg, rgba(235,194,44,0.22), rgba(235,194,44,0.10))",
-          backdropFilter: "blur(14px)",
-          WebkitBackdropFilter: "blur(14px)",
-          borderRadius: 52,
-          border: "1px solid rgba(255,255,255,0.4)",
-          boxShadow: "0 10px 40px -10px rgba(0,0,0,0.25)",
-          overflow: "hidden",
-          padding: 40,
-        }}
-      >
-        <img
-          src={iconImg}
-          alt="Cleaning service icon"
-          style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "contain",
-            filter: "drop-shadow(0 30px 50px rgba(0,0,0,0.35))",
-          }}
-        />
+            <button
+              type="submit"
+              style={{
+                border: "1px solid #d8b43d",
+                background: "linear-gradient(145deg,#ebc22c,#d4a800)",
+                color: "#fff",
+                fontWeight: 700,
+                letterSpacing: 1,
+                fontSize: 15,
+                padding: "18px 32px",
+                borderRadius: 90,
+                cursor: "pointer",
+                position: "relative",
+                overflow: "hidden",
+              }}
+            >
+              GET A QUOTE
+            </button>
+            <a
+              href="tel:8338666161"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                textDecoration: "none",
+                fontWeight: 700,
+                fontSize: 16,
+                color: "#111",
+                background: "rgba(255,255,255,0.85)",
+                border: "1px solid #111",
+                borderRadius: 90,
+                padding: "18px 32px",
+              }}
+            >
+              833-866-6161
+            </a>
+          </div>
+
+          {data && (
+            <p
+              style={{
+                margin: "8px 4px 0",
+                fontSize: 12,
+                opacity: 0.65,
+                textAlign: "center",
+              }}
+            >
+              {data.paragraph}
+            </p>
+          )}
+        </form>
       </div>
     </div>
   );
 };
-// End of file
+
+// Mobile responsive styles for the new split layout
+if (
+  typeof document !== "undefined" &&
+  !document.getElementById("header-mobile-styles")
+) {
+  const styleEl = document.createElement("style");
+  styleEl.id = "header-mobile-styles";
+  styleEl.textContent = `
+    @media (max-width: 1024px) {
+      #header > div { flex-direction: column !important; }
+      #header > div > div:first-child { 
+        padding: 40px 20px !important; 
+        text-align: center !important; 
+        align-items: center !important;
+      }
+      #header > div > div:first-child h1 { 
+        text-align: center !important; 
+        margin-bottom: 16px !important;
+      }
+      #header > div > div:last-child form {
+        width: 95% !important;
+        max-width: 450px !important;
+        padding: 30px 25px 35px !important;
+      }
+    }
+    @media (max-width: 768px) {
+      #header { height: auto !important; min-height: 100vh !important; }
+      #header > div > div:first-child { padding: 30px 15px !important; }
+      #header > div > div:first-child h1 { font-size: clamp(2rem, 7vw, 3rem) !important; }
+      #header > div > div:last-child form {
+        padding: 25px 20px 30px !important;
+        gap: 14px !important;
+      }
+      #header > div > div:last-child form input,
+      #header > div > div:last-child form select {
+        padding: 12px 18px !important;
+        font-size: 13px !important;
+      }
+      #header > div > div:last-child form button {
+        padding: 16px 28px !important;
+        font-size: 14px !important;
+      }
+    }
+  `;
+  document.head.appendChild(styleEl);
+}
